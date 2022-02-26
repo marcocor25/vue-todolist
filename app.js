@@ -10,6 +10,9 @@ const app = new Vue({
         inputClass: 'input-text',
         mainTitle: 'your tasks :',
         ulClass: 'todolist',
+        messageAddTask: 'Aggiungi la task che hai scritto.',
+        messageDone: 'Clicca per segnare la task come completata.',
+        messageDelete: 'Elimina questa task.',
         newTask: '',
         taskList: [
             'Studiare JavaScript e VueJs',
