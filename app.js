@@ -11,5 +11,10 @@ const app = new Vue({
         mainTitle: 'your tasks :',
         ulClass: 'todolist',
         newTask: '',
+        taskList: [
+            'Studiare JavaScript e VueJs',
+            'Fare aggiornamenti driver del PC',
+            'Comprare ingredienti per fare la torta di mele'
+        ]
     }
 })

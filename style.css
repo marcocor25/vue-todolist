@@ -82,7 +82,7 @@ button {
     padding: 0 20px;
     border: 1px solid #7F763F;
     border-radius: 5px;
-    text-transform: capitalize;
+    font-weight: bold;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.3);
 }

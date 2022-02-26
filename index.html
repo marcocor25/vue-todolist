@@ -14,18 +14,22 @@
 <body>
 
     <div id="root">
+        <!-- SIDEBAR -->
         <div class="sidebar">
             <h1 :class="title">{{sidebarTitle}}</h1>
             <div :class="barWrapperClass">
                 <input :type="inputType" :placeholder="placeOlder" :class="inputClass" v-model="newTask">
-                <button><i class="fa-solid fa-plus"></i></button>
+                <button @click="addTask"><i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
-
+        <!-- MAIN CONTENT -->
         <div class="main-content">
             <h1 :class="title">{{mainTitle}}</h1>
             <ul :class="ulClass">
-                <li>ciao a tutti<i class="fa-solid fa-circle-xmark"></i></li>
+                <li v-for="task in taskList">
+                    {{task}}
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </li>
             </ul>
         </div>
     </div>
