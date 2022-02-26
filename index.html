@@ -26,9 +26,9 @@
         <div class="main-content">
             <h1 :class="title">{{mainTitle}}</h1>
             <ul :class="ulClass">
-                <li v-for="task in taskList">
+                <li v-for="(task, index ) in taskList">
                     {{task}}
-                    <i class="fa-solid fa-circle-xmark"></i>
+                    <i @click="deleteTask(index)" class="fa-solid fa-circle-xmark"></i>
                 </li>
             </ul>
         </div>

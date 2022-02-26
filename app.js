@@ -14,7 +14,27 @@ const app = new Vue({
         taskList: [
             'Studiare JavaScript e VueJs',
             'Fare aggiornamenti driver del PC',
-            'Comprare ingredienti per fare la torta di mele'
+            'Comprare ingredienti per fare la torta di mele',
         ]
-    }
-})
+    },
+    methods: {
+
+        addTask: function() {
+
+            if (this.newTask !== '') {
+                this.taskList.push(this.newTask)
+            } else {
+                alert('Devi scrivere una task!')
+            }
+
+            this.newTask = ''
+
+        },
+
+        deleteTask (i) {
+            this.taskList.splice(i, 1)
+        },
+    },
+});
+
+console.log(app);
