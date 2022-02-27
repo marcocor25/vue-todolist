@@ -15,17 +15,26 @@ const app = new Vue({
         messageDelete: 'Elimina questa task.',
         newTask: '',
         taskList: [
-            'Studiare JavaScript e VueJs',
-            'Fare aggiornamenti driver del PC',
-            'Comprare ingredienti per fare la torta di mele',
-        ]
+            {
+                text: 'Studiare JavaScript e VueJs',
+                value: false,
+            },
+            {
+                text: 'Fare aggiornamenti driver del PC',
+                value: false,
+            },
+            {
+                text: 'Comprare ingredienti per fare la torta di mele',
+                value: false,
+            },
+        ],
     },
     methods: {
 
         addTask: function() {
 
             if (this.newTask !== '') {
-                this.taskList.push(this.newTask)
+                this.taskList.push({text: this.newTask})
             } else {
                 alert('Devi scrivere una task!')
             }
