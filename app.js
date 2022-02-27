@@ -32,19 +32,27 @@ const app = new Vue({
     methods: {
 
         addTask: function() {
-
             if (this.newTask !== '') {
-                this.taskList.push({text: this.newTask})
+                this.taskList.push({text: this.newTask, value: false})
             } else {
                 alert('Devi scrivere una task!')
             }
 
             this.newTask = ''
-
         },
 
         deleteTask (i) {
             this.taskList.splice(i, 1)
+        },
+
+        taskDone (j) {
+
+            if (j.value == true) {
+                j.value = false
+            } else {
+                j.value = true
+            }
+
         },
     },
 });

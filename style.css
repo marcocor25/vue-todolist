@@ -88,6 +88,11 @@ button {
     background: rgba(255, 255, 255, 0.3);
 }
 
+.active {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .fa-circle-xmark {
     font-size: 18px;
     opacity: 0.5;
