@@ -18,7 +18,7 @@
         <div class="sidebar">
             <h1 :class="title">{{sidebarTitle}}</h1>
             <div :class="barWrapperClass">
-                <input :type="inputType" :placeholder="placeOlder" :class="inputClass" v-model="newTask">
+                <input :type="inputType" :placeholder="placeOlder" :class="inputClass" v-model="newTask" @keyup.enter="addTask">
                 <button :title="messageAddTask" @click="addTask"><i class="fa-solid fa-plus"></i></button>
             </div>
         </div>
